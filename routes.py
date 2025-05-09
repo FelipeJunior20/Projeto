@@ -10,3 +10,7 @@ def homepage():
 @app.route("/login")
 def loginpage():
     return render_template("loginpage.html")
+
+@app.route("/register")
+def registerpage():
+    return render_template("registerpage.html")
