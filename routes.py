@@ -1,5 +1,5 @@
 from main import app
-from flask import render_template
+from flask import render_template, request, redirect, url_for, flash
 
 #rotas 
 
@@ -18,3 +18,9 @@ def registerpage():
 @app.route("/forgot")
 def forgotpage():
     return render_template("forgotPage.html")
+
+@app.route("/newPassword", methods=["POST", "GET"])
+def newpasswordpage():
+    if request.method == "POST":
+        return redirect(url_for("loginpage"))
+    return render_template("newPasswordPage.html")
