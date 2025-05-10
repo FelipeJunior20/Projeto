@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
-    margin: 0;
+    margin : 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Oswald", serif;
@@ -64,27 +64,7 @@ body {
     font-size: 20px;
 }
 
-
-.remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    margin: -15px 0 15px;
-}
-
-.remember-forgot label input {
-    accent-color: #fff;
-}
-
-.remember-forgo a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.remember-forgo a:hover {
-    text-decoration: underline;
-}
-
-.login {
+.forgot {
     width: 100%;
     height: 30px;
     background-color: #e1c2c2;
@@ -92,7 +72,7 @@ body {
     border-radius: 30px;
     cursor: pointer;
     font-size: 15px;
-    color: #000000;
+    color: #040404;
     font-weight: 200;
     margin-bottom: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -101,35 +81,10 @@ body {
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.login:hover {
+.forgot:hover {
     background-color: transparent;
     border: 2px rgba(233, 223, 223, 0.685);
     color: #fff;
     transition: 0.5s;
     margin-top: 20px;
-}
-
-.register-link {
-    font-size: 14px;
-    text-align: center;
-    margin: 20px 0 2;
-}
-
-.register-link a {
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 300;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-}
-
-
-.logo {
-    display: block;
-    max-width: 350px;
-    margin: 0 auto 20px;
-    object-fit: contain;
 }

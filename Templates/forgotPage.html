@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci a Senha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forgotPage.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <main class="container">
+        <form>
+            <h1>Atualizar Senha</h1>
+            <p>Escreva seu E-mail cadastrado no campo abaixo e nele você irá receber instruções para alterar sua senha!</p>
+            <div class="input-box">
+                <input placeholder="Email" type="email" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <button class="forgot" type="submit">Enviar</button>
+        </form>
+    </main>
+    
+</body>
+</html>

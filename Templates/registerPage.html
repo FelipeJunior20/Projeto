@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/registerPage.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -14,12 +15,19 @@
             <h1>Registro</h1>
             <div class="input-box">
                 <input placeholder="Nome" type="text" required>
+                <i class='bx bx-id-card'></i>
             </div>
             <div class="input-box">
                 <input placeholder="Email" type="email" required>
+                <i class='bx bx-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input placeholder="Usuário" type="text" required>
+                <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
                 <input placeholder="Senha" type="password" required>
+                <i class="bx bxs-lock-alt"></i>
             </div>
             <button class="register" type="submit">Registrar</button>
             <div class="login-link">
