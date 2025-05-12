@@ -22,5 +22,12 @@ def forgotpage():
 @app.route("/newPassword", methods=["POST", "GET"])
 def newpasswordpage():
     if request.method == "POST":
-        return redirect(url_for("loginpage"))
+        senha = request.form["password"]
+        confirmar = request.form["confirmPassword"]
+        if senha != confirmar:
+            flash("❌ As senhas não coincidem. Tente novamente.", "error")
+            return redirect(url_for("newpasswordpage"))
+        else:
+            flash("✅ Senha alterada com sucesso!", "success")
+        return redirect(url_for("newpasswordpage"))
     return render_template("newPasswordPage.html")
