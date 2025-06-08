@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +9,39 @@
 </head>
 
 <body>
-    <form>
+    <form method="Post" action="{{ url_for('registerpage') }}">
         <main class="container">
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            
             <h1>Registro</h1>
             <div class="input-box">
-                <input placeholder="Nome" type="text" required>
+                <input name="nome" placeholder="Nome" type="text" required>
                 <i class='bx bx-id-card'></i>
             </div>
             <div class="input-box">
-                <input placeholder="Email" type="email" required>
+                <input name="email" placeholder="Email" type="email" required>
                 <i class='bx bx-envelope'></i>
             </div>
             <div class="input-box">
-                <input placeholder="Usuário" type="text" required>
+                <input name="usuario" placeholder="Usuário" type="text" required>
                 <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
-                <input placeholder="Senha" id="password" type="password" required>
+                <input name="password" placeholder="Senha" id="password" type="password" required>
                 <span class="toggle-eye" onclick="toggleEye()"><i id="eye-icon" class="bx bxs-hide"></i></span>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirmPassword" id="password2" placeholder="Confirmar Senha" required>
+                <span class="toggle-eye" onclick="toggleEye2()"><i id="eye-icon2" class="bx bxs-hide"></i></span>
             </div>
             <button class="register" type="submit">Registrar</button>
             <div class="login-link">
